@@ -1,7 +1,7 @@
 const PersonDefs = `
     type Person {
         id: Int
-        name: String
+        name: String!
     }
 
     type Query {

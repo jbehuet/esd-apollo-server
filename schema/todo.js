@@ -1,8 +1,8 @@
 const TodoDefs = `
     type Todo {
-        id: Int!
+        id: Int
         task: String!
-        completed: Boolean!
+        completed: Boolean
         author: Person!
     }
 
