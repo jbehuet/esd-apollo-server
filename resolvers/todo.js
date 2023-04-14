@@ -29,7 +29,8 @@ const todoResolvers = {
     updateTodo: (_, args) => {
       const idx = todos.findIndex((todo) => todo.id == args.id);
       if (args.task) todos[idx].task = args.task;
-      if (args.completed) todos[idx].completed = args.completed;
+      if (args.hasOwnProperty("completed"))
+        todos[idx].completed = args.completed;
       if (args.idAuthor) todos[idx].author = persons[args.idAuthor];
 
       return todos[idx];
